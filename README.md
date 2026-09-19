@@ -1,188 +1,259 @@
-# 🚀 3D Portfolio
+# Abhishek Kumar Singh — Portfolio
 
-A jaw-dropping developer portfolio packed with interactive 3D animations, buttery smooth transitions, and a space-themed aesthetic. Not your average portfolio template! This one has a fully interactive 3D keyboard where each keycap is a skill.
-
-> **Free to use!** This portfolio is open source. If you use it, a credit/link back would be really appreciated 🙏
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Abhishek-singh06/3d-portfolio)
-
-![Portfolio Preview](https://github.com/Abhishek-singh06/Portfolio/blob/main/public/assets/projects-screenshots/portfolio/landing.png?raw=true)
-
-## ✨ Features
-
-- **Interactive 3D Keyboard** — Custom Spline keyboard where each keycap represents a skill, revealing titles and descriptions on hover/press
-- **Buttery Animations** — GSAP + Framer Motion powered scroll, hover, and reveal animations
-- **Space Theme** — Floating particles on a dark canvas for a cosmic vibe
-- **Light & Dark Mode** — Full theme support with cheeky disclaimer toasts
-- **Responsive** — Works across all screen sizes
-- **Contact Form** — Email delivery via Resend
-- **Analytics** _(optional)_ — Umami analytics integration
-
-## 🛠️ Tech Stack
-
-| Layer | Technologies |
-|---|---|
-| **Framework** | Next.js 14, React 18, TypeScript |
-| **Styling** | Tailwind CSS, Shadcn UI, Aceternity UI |
-| **Animation** | GSAP, Framer Motion |
-| **3D** | Spline Runtime |
-| **Email** | Resend |
-| **Misc** | Lenis (smooth scroll), Zod, next-themes |
+> Personal portfolio of Abhishek Kumar Singh — Software Engineer and Full-Stack Developer, showcasing projects, technical skills, experience, education, leadership, and achievements.
 
 ---
 
-## 🚀 Getting Started
+## About Me
 
-### Prerequisites
+I am **Abhishek Kumar Singh**, a B.Tech Electronics and Computer Engineering student at **VIT Chennai**, focused on software engineering, full-stack development, and AI-powered applications.
 
-- Node.js (v18+)
-- pnpm (recommended), npm, or yarn
+I enjoy building practical products that solve real-world problems and working across frontend, backend, databases, APIs, and AI integrations.
 
-### Installation
+- **Current CGPA:** 8.8/10
+- **Current Role:** Full Stack Developer Intern at QuickIntell
+
+---
+
+## Tech Stack
+
+### Languages
+- Java
+- JavaScript
+- SQL
+
+### Frontend
+- HTML5
+- CSS3
+- React
+- Next.js
+- Tailwind CSS
+
+### Backend
+- Node.js
+- FastAPI
+
+### Databases
+- MySQL
+- MongoDB
+- PostgreSQL
+- Supabase
+
+### AI
+- Gemini API
+- AI Integration
+
+### Core CS
+- Data Structures & Algorithms
+- Object-Oriented Programming
+- DBMS
+- Operating Systems
+- Computer Networks
+
+### Tools
+- Git
+- GitHub
+- VS Code
+
+---
+
+## Featured Projects
+
+### UniFetch
+A student-powered peer delivery platform connecting students who need items with students already traveling in that direction.
+
+Features include trip matching, campus credits, INR/UPI payments, negotiation chat, reviews, notifications, real-time tracking, authentication, ID verification, and OTP-secured delivery.
+
+- **Tech Stack:** Next.js, React, TypeScript, Supabase, PostgreSQL, Tailwind CSS
+- **GitHub:** [https://github.com/Abhishek-singh06/unifetch](https://github.com/Abhishek-singh06/unifetch)
+- **Live Demo:** [https://unifetch.netlify.app/](https://unifetch.netlify.app/)
+
+---
+
+### GetPlaced
+An AI-powered placement readiness platform that analyzes GitHub, LeetCode, resumes, skills, and projects to generate readiness scores, skill-gap analysis, ATS improvements, interview preparation, and personalized career action plans.
+
+> 🏆 **Smart AI Hackathon — VIT Chennai**  
+> **Role:** Team Leader  
+> **Result:** Secured second position among 119 teams.
+
+- **Tech Stack:** React, Node.js, FastAPI, MongoDB, Gemini API
+- **GitHub:** [https://github.com/Abhishek-singh06/getPlaced](https://github.com/Abhishek-singh06/getPlaced)
+- **Live Demo:** [https://getplaced.siqht.in/](https://getplaced.siqht.in/)
+
+---
+
+### QuantLab
+A quantitative market intelligence platform focused on Indian markets, combining market data, technical analysis, screening, portfolio management, and quantitative services.
+
+- **Tech Stack:** React, TypeScript, Spring Boot, Java, PostgreSQL, Redis, Python, FastAPI
+- **GitHub:** [https://github.com/Abhishek-singh06/Quant-lab](https://github.com/Abhishek-singh06/Quant-lab)
+
+---
+
+### MedExtract
+A patient-data automation platform designed to automate authorized portal lookups and structure extracted patient information into formatted Excel reports.
+
+- **Tech Stack:** React, Vite, Node.js, Express, Playwright, ExcelJS
+- **GitHub:** [https://github.com/Abhishek-singh06/MedExtract](https://github.com/Abhishek-singh06/MedExtract)
+
+---
+
+### CityFlow
+A transit operations platform combining GIS route planning, crew-bus scheduling, driver-rest validation, conflict detection, spatial analysis, and KPI monitoring.
+
+- **Tech Stack:** React, Vite, Tailwind CSS, Leaflet, Turf.js
+
+---
+
+### AEC Coordination Intelligence System
+An enterprise-oriented coordination platform for managing multi-trade activities, critical-path variance, schedule-shift impact, approval gates, and audit trails.
+
+- **Tech Stack:** Next.js, TypeScript, Tailwind CSS, Zustand
+- **GitHub:** [https://github.com/Abhishek-singh06/coordination-intelligence-as-01](https://github.com/Abhishek-singh06/coordination-intelligence-as-01)
+- **Live Demo:** [https://coordination-system.netlify.app/](https://coordination-system.netlify.app/)
+
+---
+
+## Other Projects
+
+### Property Post Maker
+Professional property marketing creative generator for creating high-resolution real estate marketing posts in seconds with brand configuration and PNG export.
+- **GitHub:** [https://github.com/Abhishek-singh06/Initial-Property-Post-Maker](https://github.com/Abhishek-singh06/Initial-Property-Post-Maker)
+- **Live Demo:** [https://abhishek-singh06.github.io/Initial-Property-Post-Maker/](https://abhishek-singh06.github.io/Initial-Property-Post-Maker/)
+
+### React Password Generator
+Customizable password generation tool built with React supporting length controls and character set options.
+- **GitHub:** [https://github.com/Abhishek-singh06/react-password-generator](https://github.com/Abhishek-singh06/react-password-generator)
+- **Live Demo:** [https://fervent-volhard-f2991a.netlify.app/](https://fervent-volhard-f2991a.netlify.app/)
+
+### Cric-Stat
+Full-stack cricket statistics tracker for logging player metrics, matches, and performances with interactive dashboards.
+- **GitHub:** [https://github.com/Abhishek-singh06/cric-stat](https://github.com/Abhishek-singh06/cric-stat)
+
+### Cricket Game
+Browser-based Bat Ball Stump game built with interactive gameplay logic.
+- **GitHub:** [https://github.com/Abhishek-singh06/CRICKET-GAME-](https://github.com/Abhishek-singh06/CRICKET-GAME-)
+- **Live Demo:** [https://abhishek-singh06.github.io/CRICKET-GAME-/](https://abhishek-singh06.github.io/CRICKET-GAME-/)
+
+### Spotify Clone
+Spotify-inspired browser music player featuring playback controls, responsive UI, and song playlists.
+- **GitHub:** [https://github.com/Abhishek-singh06/SPOTIFY-CLONE](https://github.com/Abhishek-singh06/SPOTIFY-CLONE)
+
+### Calculator
+Clean interactive browser calculator built with vanilla web technologies.
+- **GitHub:** [https://github.com/Abhishek-singh06/CALCULATOR](https://github.com/Abhishek-singh06/CALCULATOR)
+
+---
+
+## Experience
+
+### Full Stack Developer Intern — QuickIntell
+- **Duration:** 6 Months
+- **Location:** India
+- **Description:** Developed and maintained full-stack applications, contributing to frontend, backend, API development, database integration, debugging, and deployment in a production-oriented environment.
+
+---
+
+## Education
+
+### VIT Chennai
+- **Degree:** B.Tech — Electronics and Computer Engineering
+- **Duration:** 2024–2028
+- **CGPA:** 8.8/10
+- **Academic Focus:**
+  - Data Structures & Algorithms
+  - Full-Stack Development
+  - Database Systems
+  - Object-Oriented Programming
+  - Operating Systems
+  - Computer Networks
+
+### Lucknow Public College
+- **Level:** School Education
+- **Score:** 96%
+- **Leadership Roles:**
+  - Head Boy
+  - Sports Captain
+
+---
+
+## Leadership & Positions
+
+### Programme Representative — VIT Chennai
+Selected as Programme Representative twice, representing approximately 438 students and serving as a communication bridge between students and faculty.
+
+### Discipline Representative — VIT Chennai
+Served as a student discipline representative, supporting discipline-related coordination and communication within the student community.
+
+### Sports Representative — VIT Chennai
+Coordinated 4 major sports events serving approximately 890–1,100 participants per event, managing event operations, scheduling, and student coordination.
+
+### Management Lead — Sangam Club
+Led a 37-member team, overseeing event planning, volunteer coordination, logistics, and execution.
+
+---
+
+## Achievements
+
+### Smart AI Hackathon — VIT Chennai
+- **Role:** Team Leader
+- **Achievement:** Secured second position among 119 teams.
+
+### Academic
+- **Current CGPA:** 8.8/10 (VIT Chennai)
+- **School Score:** 96% (Lucknow Public College)
+
+---
+
+## Connect With Me
+
+- **LinkedIn:** [https://www.linkedin.com/in/abhishekkumarsingh001](https://www.linkedin.com/in/abhishekkumarsingh001)
+- **GitHub:** [https://github.com/Abhishek-singh06](https://github.com/Abhishek-singh06)
+- **LeetCode:** [https://leetcode.com/u/Abhishek_Kumar_Singh01/](https://leetcode.com/u/Abhishek_Kumar_Singh01/)
+- **Email:** [abhishek.k.singhs01@gmail.com](mailto:abhishek.k.singhs01@gmail.com)
+
+---
+
+## Portfolio
+
+This repository contains the source code for my personal portfolio website.
+
+The portfolio includes:
+- About
+- Experience
+- Education
+- Projects
+- Technical Skills
+- Leadership & Positions
+- Achievements
+- Blog
+- Resume
+- Contact
+
+---
+
+## Local Development
+
+To run this portfolio locally on your machine:
 
 1. **Clone the repository:**
-
-    ```bash
-    git clone https://github.com/Abhishek-singh06/3d-portfolio.git
-    cd 3d-portfolio
-    ```
+   ```bash
+   git clone https://github.com/Abhishek-singh06/Portfolio.git
+   cd Portfolio
+   ```
 
 2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-    ```bash
-    pnpm install
-    ```
+3. **Start the local development server:**
+   ```bash
+   npm run dev
+   ```
 
-3. **Set up environment variables:**
-
-    Copy `.env.example` to `.env.local` and fill in the values:
-
-    ```bash
-    cp .env.example .env.local
-    ```
-
-    | Variable | Required | Description |
-    |---|---|---|
-    | `RESEND_API_KEY` | Yes | API key from [Resend](https://resend.com) for the contact form |
-    | `NEXT_PUBLIC_WS_URL` | No | WebSocket server URL for realtime features (cursors, chat, presence) |
-    | `UMAMI_DOMAIN` | No | Umami analytics script URL |
-    | `UMAMI_SITE_ID` | No | Umami website ID |
-
-4. **Run the development server:**
-
-    ```bash
-    pnpm dev
-    ```
-
-5. Open [http://localhost:3000](http://localhost:3000) and see the magic ✨
-
----
-
-## 🎨 Make It Your Own
-
-All personal info is centralized in [`src/data/config.ts`](src/data/config.ts). Edit this single file to rebrand the portfolio:
-
-```ts
-const config = {
-  title: "Your Name | Your Title",
-  description: {
-    long: "Your long description for SEO...",
-    short: "Your short description...",
-  },
-  keywords: ["your", "keywords"],
-  author: "Your Name",
-  email: "you@example.com",
-  site: "https://yoursite.com",
-
-  // GitHub stars button in the header
-  githubUsername: "your-github-username",
-  githubRepo: "your-repo-name",
-
-  social: {
-    twitter: "https://x.com/you",
-    linkedin: "https://linkedin.com/in/you",
-    instagram: "https://instagram.com/you",
-    facebook: "https://facebook.com/you",
-    github: "https://github.com/you",
-  },
-};
-```
-
-Other files you'll want to customize:
-
-| File | What to change |
-|---|---|
-| `src/data/projects.tsx` | Your projects, screenshots, descriptions, and tech stacks |
-| `src/data/constants.ts` | Skills list (name, description, icon) and work experience |
-| `public/assets/` | Your images, OG image, and project screenshots |
-
----
-
-## ⌨️ Updating the 3D Keyboard Skills
-
-The 3D keyboard keycaps are baked into a Spline file. To update the skills displayed on the keyboard:
-
-1. **Import** the `public/assets/skills-keyboard.spline` file into [Spline](https://spline.design/)
-2. **Unhide** the keycap objects you want to edit
-3. **Update** the logo images on each keycap to your new skill icons
-4. **Rename** each keycap object to match the skill's `name` field in `src/data/constants.ts` (e.g. `js`, `react`, `docker`)
-5. **Hide** all keycap objects again
-6. **Export** the scene and overwrite `public/assets/skills-keyboard.spline`
-
-After updating the Spline file, make sure `src/data/constants.ts` has matching entries for every skill on the keyboard:
-
-```ts
-// Each keycap object name in Spline must match a key in SKILLS
-export const SKILLS: Record<SkillNames, Skill> = {
-  js: { name: "js", label: "JavaScript", shortDescription: "...", ... },
-  react: { name: "react", label: "React", shortDescription: "...", ... },
-  // ... add/remove entries to match your keyboard
-};
-```
-
-The `SkillNames` enum, `SKILLS` record, and the Spline keycap names must all stay in sync for the keyboard interactions to work correctly.
-
----
-
-## 🔌 Realtime Features (Optional)
-
-The portfolio supports optional realtime features powered by a **separate backend API**:
-
-- 🖱️ **Live cursors** — See other visitors' cursors in realtime
-- 👥 **Online presence** — Shows who's currently on the site
-- 💬 **Chat** — Live chat between visitors
-
-These features activate automatically when the `NEXT_PUBLIC_WS_URL` environment variable is set. Without it, the portfolio works perfectly fine as a static site — no realtime features, no backend dependency.
-
-> [!NOTE]
-> The backend API is **not open source**. This is intentional! Too many people have cloned the portfolio and claimed they built it from scratch. The realtime server stays private to keep the live experience unique make make it standout.
-
-
----
-
-## 🚀 Deployment
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Abhishek-singh06/3d-portfolio)
-
-This site is deployed on **Vercel**. To deploy your own:
-
-1. Push your code to a GitHub repository
-2. Connect the repository to [Vercel](https://vercel.com)
-3. Add your environment variables in the Vercel dashboard
-4. Vercel handles the rest — automatic deployments on every push
-
----
-
-## 🤝 Contributing
-
-If you'd like to contribute or suggest improvements, feel free to open an issue or submit a pull request. All contributions are welcome!
-
----
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-If you use this portfolio, a credit or link back to the [original repo](https://github.com/Abhishek-singh06/3d-portfolio) would be much appreciated ❤️
-
-Note on analytics: a deployed copy reports its own hostname once per browser (nothing else — no visitor, page, or referrer data) so I can see where the template gets used.
+4. **Build for production:**
+   ```bash
+   npm run build
+   ```
