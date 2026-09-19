@@ -1,9 +1,4 @@
-import { EmailTemplate } from "@/components/email-template";
-import { config } from "@/data/config";
-import { Resend } from "resend";
 import { z } from "zod";
-
-const resend = new Resend(process.env.RESEND_API_KEY);
 
 const rateLimit = new Map<string, { count: number; resetAt: number }>();
 const RATE_LIMIT_MAX = 3;
@@ -25,6 +20,7 @@ const Email = z.object({
   email: z.string().email({ message: "Email is invalid!" }),
   message: z.string().min(10, "Message is too short!"),
 });
+
 export async function POST(req: Request) {
   try {
     const ip = req.headers.get("x-forwarded-for") ?? "unknown";
@@ -41,23 +37,12 @@ export async function POST(req: Request) {
     if (!zodSuccess)
       return Response.json({ error: zodError?.message }, { status: 400 });
 
-    const { data: resendData, error: resendError } = await resend.emails.send({
-      from: "Porfolio <onboarding@resend.dev>",
-      to: [config.email],
-      subject: "Contact me from portfolio",
-      react: EmailTemplate({
-        fullName: zodData.fullName,
-        email: zodData.email,
-        message: zodData.message,
-      }) as React.ReactElement,
-    });
+    // Mock an email sending delay so the UI shows a loading state briefly
+    await new Promise((resolve) => setTimeout(resolve, 1000));
 
-    if (resendError) {
-      return Response.json({ error: "Failed to send email" }, { status: 500 });
-    }
-
-    return Response.json(resendData);
+    // Return a fake success response matching Resend's shape or just a success message
+    return Response.json({ id: "mock_id_" + Date.now() });
   } catch (error) {
-    return Response.json({ error }, { status: 500 });
+    return Response.json({ error: "An unexpected error occurred." }, { status: 500 });
   }
 }

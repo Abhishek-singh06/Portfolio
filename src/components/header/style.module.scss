@@ -8,13 +8,15 @@
   backdrop-filter: blur(12px);
 
   .background {
-    background-color: hsl(240 10% 3.9%); // constant color instead of using a css variable
-    opacity: 0.5;
+    background-color: hsl(222 47% 6%);
+    opacity: 0.96;
+    backdrop-filter: blur(20px);
     height: 100%;
     width: 100%;
     position: absolute;
     left: 0;
     top: 100%;
+    background-image: radial-gradient(ellipse 80% 60% at 50% 10%, rgba(59, 130, 246, 0.08), transparent 70%);
   }
 
   .bar {

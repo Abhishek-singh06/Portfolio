@@ -1,45 +1,43 @@
 const config = {
-  title: "Naresh Khatri | Full-Stack Developer",
+  title: "Abhishek Kumar Singh | Software Engineer",
   description: {
-    long: "Explore the portfolio of Naresh, a full-stack developer and creative technologist specializing in interactive web experiences, 3D animations, and innovative projects. Discover my latest work, including Coding Ducks, The Booking Desk, Ghostchat, and more. Let's build something amazing together!",
-    short:
-      "Discover the portfolio of Naresh, a full-stack developer creating interactive web experiences and innovative projects.",
+    long: "Explore the portfolio of Abhishek Kumar Singh, a Software Engineer and Full-Stack Developer from VIT Chennai building full-stack applications, AI-powered platforms, and real-world software solutions using React, Next.js, Node.js, FastAPI, databases, and modern web technologies.",
+    short: "Software Engineer and Full-Stack Developer building modern web applications, AI-powered platforms, and real-world software solutions.",
   },
   keywords: [
-    "Naresh",
-    "portfolio",
-    "full-stack developer",
-    "creative technologist",
-    "web development",
-    "3D animations",
-    "interactive websites",
-    "Coding Ducks",
-    "The Booking Desk",
-    "Ghostchat",
-    "web design",
-    "GSAP",
+    "Abhishek Kumar Singh",
+    "Software Engineer",
+    "Full Stack Developer",
     "React",
     "Next.js",
-    "Spline",
-    "Framer Motion",
+    "Node.js",
+    "FastAPI",
+    "Java",
+    "JavaScript",
+    "TypeScript",
+    "AI",
+    "Gemini API",
+    "Supabase",
+    "PostgreSQL",
+    "MongoDB",
+    "VIT Chennai",
+    "Web Development"
   ],
-  author: "Naresh Khatri",
-  email: "naresh.khatri2345@gmail.com",
-  site: "https://nareshkhatri.dev",
+  author: "Abhishek Kumar Singh",
+  email: "abhishek.k.singhs01@gmail.com",
+  site: "https://github.com/Abhishek-singh06",
 
   // for github stars button
-  githubUsername: "naresh-khatri",
-  githubRepo: "3d-portfolio",
+  githubUsername: "Abhishek-singh06",
+  githubRepo: "portfolio",
 
   get ogImg() {
     return this.site + "/assets/seo/og-image.png";
   },
   social: {
-    twitter: "https://x.com/nothotchaddi",
-    linkedin: "https://www.linkedin.com/in/naresh-khatri/",
-    instagram: "https://www.instagram.com/hotchaddi",
-    facebook: "https://www.facebook.com/HotChaddi/",
-    github: "https://github.com/Naresh-Khatri",
+    linkedin: "https://www.linkedin.com/in/abhishekkumarsingh001",
+    github: "https://github.com/Abhishek-singh06",
+    leetcode: "https://leetcode.com/u/Abhishek_Kumar_Singh01/",
   },
 };
 export { config };

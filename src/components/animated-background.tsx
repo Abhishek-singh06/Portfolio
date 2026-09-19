@@ -36,6 +36,17 @@ const KeyboardScene = ({ maxDpr }: { maxDpr: number }) => {
 
   // --- Event Handlers ---
 
+  // --- Safe Variable Setter ---
+  const safeSetVariable = (name: string, value: string) => {
+    if (!splineApp) return;
+    try {
+      // Attempt to set variable; ignore if it doesn't exist in the scene
+      splineApp.setVariable(name, value);
+    } catch (e) {
+      // Gracefully ignore missing variables
+    }
+  };
+
   const handleMouseHover = (e: SplineEvent) => {
     if (!splineApp || selectedSkillRef.current?.name === e.target.name) return;
 
@@ -43,10 +54,10 @@ const KeyboardScene = ({ maxDpr }: { maxDpr: number }) => {
       if (selectedSkillRef.current) playReleaseSound();
       setSelectedSkill(null);
       selectedSkillRef.current = null;
-      if (splineApp.getVariable("heading") && splineApp.getVariable("desc")) {
-        splineApp.setVariable("heading", "");
-        splineApp.setVariable("desc", "");
-      }
+      try {
+        if (splineApp.getVariable("heading") !== undefined) safeSetVariable("heading", "");
+        if (splineApp.getVariable("desc") !== undefined) safeSetVariable("desc", "");
+      } catch (err) {}
     } else {
       if (!selectedSkillRef.current || selectedSkillRef.current.name !== e.target.name) {
         const skill = SKILLS[e.target.name as SkillNames];
@@ -76,8 +87,8 @@ const KeyboardScene = ({ maxDpr }: { maxDpr: number }) => {
     splineApp.addEventListener("keyUp", () => {
       if (!splineApp || isInputFocused()) return;
       playReleaseSound();
-      splineApp.setVariable("heading", "");
-      splineApp.setVariable("desc", "");
+      safeSetVariable("heading", "");
+      safeSetVariable("desc", "");
     });
     splineApp.addEventListener("keyDown", (e) => {
       if (!splineApp || isInputFocused()) return;
@@ -86,8 +97,8 @@ const KeyboardScene = ({ maxDpr }: { maxDpr: number }) => {
         playPressSound();
         setSelectedSkill(skill);
         selectedSkillRef.current = skill;
-        splineApp.setVariable("heading", skill.label);
-        splineApp.setVariable("desc", skill.shortDescription);
+        safeSetVariable("heading", skill.label);
+        safeSetVariable("desc", skill.shortDescription);
       }
     });
     splineApp.addEventListener("mouseHover", handleMouseHover);
@@ -259,27 +270,59 @@ const KeyboardScene = ({ maxDpr }: { maxDpr: number }) => {
     const allObjects = splineApp.getAllObjects();
     const keycaps = allObjects.filter((obj) => obj.name === "keycap");
 
-    await sleep(900);
+    await sleep(600);
+
+    // Explicitly unhide all platform components, keycaps, and individual technology keys
+    const skillKeyNames = new Set([
+      "js", "ts", "html", "css", "react", "vue", "nextjs", "tailwind",
+      "nodejs", "express", "postgres", "mongodb", "git", "github",
+      "prettier", "npm", "firebase", "wordpress", "linux", "docker",
+      "nginx", "aws", "vim", "vercel", "fastapi", "java", "sql", "supabase",
+      ...Object.values(SKILLS).map((s) => s.name),
+    ]);
+
+    allObjects.forEach((obj) => {
+      if (
+        obj.name === "keyboard" ||
+        obj.name === "platform" ||
+        obj.name === "body" ||
+        obj.name === "keycap" ||
+        obj.name === "keycap-desktop" ||
+        obj.name === "keycap-mobile" ||
+        skillKeyNames.has(obj.name)
+      ) {
+        obj.visible = true;
+      }
+    });
 
     if (isMobile) {
       const mobileKeyCaps = allObjects.filter((obj) => obj.name === "keycap-mobile");
-      mobileKeyCaps.forEach((keycap) => { keycap.visible = true; });
+      mobileKeyCaps.forEach((keycap) => {
+        keycap.visible = true;
+      });
     } else {
       const desktopKeyCaps = allObjects.filter((obj) => obj.name === "keycap-desktop");
       desktopKeyCaps.forEach(async (keycap, idx) => {
-        await sleep(idx * 70);
+        await sleep(idx * 30);
         keycap.visible = true;
       });
     }
 
+    // Unhide individual skill keys with colorful icons
+    Object.values(SKILLS).forEach((skill) => {
+      const obj = splineApp.findObjectByName(skill.name);
+      if (obj) {
+        obj.visible = true;
+      }
+    });
+
     keycaps.forEach(async (keycap, idx) => {
-      keycap.visible = false;
-      await sleep(idx * 70);
+      const targetY = keycap.position.y || 0;
       keycap.visible = true;
       gsap.fromTo(
         keycap.position,
-        { y: 200 },
-        { y: 50, duration: 0.5, delay: 0.1, ease: "bounce.out" }
+        { y: targetY + 120 },
+        { y: targetY, duration: 0.6, delay: idx * 0.02, ease: "bounce.out" }
       );
     });
   };
@@ -393,8 +436,10 @@ const KeyboardScene = ({ maxDpr }: { maxDpr: number }) => {
     const manageAnimations = async () => {
       // Reset text if not in skills
       if (activeSection !== "skills") {
-        splineApp.setVariable("heading", "");
-        splineApp.setVariable("desc", "");
+        try {
+          if (splineApp.getVariable("heading") !== undefined) splineApp.setVariable("heading", "");
+          if (splineApp.getVariable("desc") !== undefined) splineApp.setVariable("desc", "");
+        } catch (e) {}
       }
 
       // Handle Rotate/Teardown Tweens

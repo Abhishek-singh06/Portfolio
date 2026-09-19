@@ -44,6 +44,7 @@ const ScrollingPreview = ({
   const [bgReady, setBgReady] = useState(false);
 
   useEffect(() => {
+    if (!src) return;
     let cancelled = false;
     const img = new window.Image();
     const compute = () => {
@@ -134,7 +135,7 @@ const ScrollingPreview = ({
           style={{
             position: "absolute",
             inset: 0,
-            backgroundImage: `url("${src}")`,
+            backgroundImage: src ? `url("${src}")` : FALLBACK_BG,
             // Tall pages fill width and pan; normal images cover the frame.
             backgroundSize: scrolls ? "100% auto" : "cover",
             backgroundRepeat: "no-repeat",

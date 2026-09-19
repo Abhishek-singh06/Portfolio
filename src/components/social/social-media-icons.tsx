@@ -19,14 +19,9 @@ const BUTTONS = [
     icon: <SiLinkedin size={"24"} color={"#fff"} />,
   },
   {
-    name: "Twitter",
-    href: config.social.twitter,
-    icon: <SiX size={"24"} color={"#fff"} />,
-  },
-  {
-    name: "Instagram",
-    href: config.social.instagram,
-    icon: <SiInstagram size={"24"} color={"#fff"} />,
+    name: "LeetCode",
+    href: config.social.leetcode,
+    icon: <span className="font-bold text-white">LC</span>,
   },
 ];
 
@@ -37,8 +32,16 @@ const SocialMediaButtons = () => {
     <div ref={ref} className="z-10">
       {show &&
         BUTTONS.map((button) => (
-          <Link href={button.href} key={button.name} target="_blank">
-            <Button variant={"ghost"}>{button.icon}</Button>
+          <Link
+            href={button.href}
+            key={button.name}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={button.name}
+          >
+            <Button variant={"ghost"} aria-label={button.name}>
+              {button.icon}
+            </Button>
           </Link>
         ))}
     </div>

@@ -28,10 +28,11 @@ const ContactSection = () => {
               Please contact me directly at{" "}
               <a
                 target="_blank"
+                rel="noopener noreferrer"
                 href={`mailto:${config.email}`}
-                className="text-gray-200 cursor-can-hover rounded-lg"
+                className="text-foreground font-medium underline underline-offset-4 decoration-primary/50 hover:decoration-primary hover:text-primary transition-colors cursor-pointer"
               >
-                {config.email.replace(/@/g, "(at)")}
+                {config.email}
               </a>{" "}
               or drop your info here.
             </CardDescription>

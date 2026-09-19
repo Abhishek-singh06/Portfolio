@@ -9,7 +9,17 @@ const links: Link[] = [
   {
     title: 'About',
     href: '/#about',
-    thumbnail: '/assets/nav-link-previews/about.png'
+    thumbnail: '/assets/nav-link-previews/landing.png'
+  },
+  {
+    title: 'Experience',
+    href: '/#experience',
+    thumbnail: '/assets/nav-link-previews/landing.png'
+  },
+  {
+    title: 'Projects',
+    href: '/#projects',
+    thumbnail: '/assets/nav-link-previews/projects.png'
   },
   {
     title: 'Skills',
@@ -17,24 +27,14 @@ const links: Link[] = [
     thumbnail: '/assets/nav-link-previews/skills.png'
   },
   {
-    title: 'Projects',
-    href: '/#projects',
-    thumbnail: '/assets/nav-link-previews/projects.png'
+    title: 'Leadership',
+    href: '/#leadership',
+    thumbnail: '/assets/nav-link-previews/landing.png'
   },
-  // {
-  //   title: 'Skills',
-  //   href: '/skills',
-  //   thumbnail: '/assets/nav-link-previews/skills.png'
-  // },
-  // {
-  //   title: 'Testimonials',
-  //   href: '/testimonials',
-  //   thumbnail: '/assets/nav-link-previews/testimonials.png'
-  // },
   {
-    title: 'Blogs',
-    href: '/blogs',
-    thumbnail: '/assets/nav-link-previews/blog.png',
+    title: 'Blog',
+    href: '/blog',
+    thumbnail: '/assets/nav-link-previews/projects.png',
   },
   {
     title: 'Contact',
